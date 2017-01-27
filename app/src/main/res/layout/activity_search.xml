@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="sara.com.Views.SearchActivity">
+
+    <include
+        android:id="@+id/bar_search"
+        layout="@layout/toolbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/lnr_general_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/default_padding"
+        android:layout_marginRight="@dimen/default_padding"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/s_padding"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:paddingTop="@dimen/s_padding">
+
+        <EditText
+            android:id="@+id/et_general_search"
+            android:layout_width="@dimen/et_width"
+            android:layout_height="@dimen/tv_height"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_size" />
+
+        <ImageView
+            android:id="@+id/img_general_search"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/default_padding"
+            android:layout_marginLeft="@dimen/default_padding"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnr_general_search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_padding"
+        android:checkedButton="@+id/rb_photos"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
+            android:paddingRight="@dimen/default_padding"
+            android:text="@string/photos"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_size" />
+
+        <RadioButton
+            android:id="@+id/rb_groups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/blue"
+            android:paddingRight="@dimen/default_padding"
+            android:text="@string/groups"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_size" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_general_search"
+        android:layout_width="@dimen/et_width"
+        android:layout_height="@dimen/tv_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/l_padding"
+        android:background="@drawable/btn_background"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_lrg"
+        android:visibility="gone" />
+
+</RelativeLayout>

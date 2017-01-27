@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sara.com.Views.SearchPhotoActivity">
+
+    <include
+        android:id="@+id/bar_search_photo"
+        layout="@layout/toolbar_layout" />
+
+    <GridView
+        android:id="@+id/grdV_photos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar_search_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/default_padding"
+        android:horizontalSpacing="@dimen/default_padding"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/default_padding"></GridView>
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_height"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

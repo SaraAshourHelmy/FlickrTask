@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FlickrTask</string>
+    <string name="internet_error">No Internet Connection</string>
+    <string name="wait">Loading ...</string>
+
+    <string name="groups">Groups</string>
+    <string name="photos">Photos</string>
+    <string name="search">Search</string>
+    <string name="tag_error">enter search text</string>
+</resources>

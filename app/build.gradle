@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "sara.com.orangetask"
+        minSdkVersion 17
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // for testing
+    testCompile 'junit:junit:4.12'
+
+    // robotium test
+    compile 'com.jayway.android.robotium:robotium-solo:5.2.1'
+
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+
+    // for volley
+    compile 'com.android.volley:volley:1.0.0'
+
+    // for uriBuilder
+    compile group: 'cz.msebera.android', name: 'httpclient', version: '4.4.1.1'
+
+    // for Gson
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+
+    // for picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // for espresso
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+}
